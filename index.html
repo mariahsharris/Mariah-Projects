@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div> 
-        <header>
-            <div>
-                <h2>Hello, I'm</h2>
+    <div class="container"> 
+        <header class="header">
+            <div class="header-text-section">
+                <h2>CS @ FIU ‘26 </h2>
                 <h1>Mariah Harris</h1>
-                <h2>Website Development | AI/ML | Class of 2026</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro quasi repudiandae adipisci rem sed officiis dicta dolorem asperiores aut dignissimos ullam veniam nisi necessitatibus esse quod, minus similique excepturi! Non!</p>
+                <h2>Advocate for Inclusive Gaming | Aspiring Software Engineer</h2>
+                <p>With a foundation in coding, data structures, and problem-solving, I am driven to find new ways to apply my knowledge in an innovative and meaningful way. One of my many passions encompasses the intersections between technology and inclusivity. 
+                    I believe that technology, especially in gaming and other digital platforms, should be inclusive and accessible to everyone.</p>
             </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img" width="500px">
+            <div class="header-image-section">
+                <img class="header-image" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img" width="500px">
             </div>
         </header>
 
-        <section>
-            <div>Skills</div>
-            <div>
+        <section class="skills-section">
+            <div class="skills-title">Skills</div>
+            <div class="skills-card">
                 <p>HTML, CSS, Javascript</p>
             </div>
         </section>
 
         <section>
             <h2>Projects</h2>
-            <div>
+            <div class="carousel">
                 <button>&#8592;</button>
-                <div>
+                <div class="projects">
+                    <div class="projects-card">
+                        <img src="" alt="An image" class="projects-image">
+                        <h3 class="project-title">A Project</h3>
+                        <p class="project-text">Some random text</p>
+                        <a href="" class="project-link">Link</a>
+                    </div>
                     
                 </div>
                 <button>&#8594;</button>
@@ -124,6 +132,16 @@
                 
             </div>
         </section>
+
+        <footer>
+            <div>
+                <p>&copy; 2025 Mariah Harris</p>
+                <a href="https://www.linkedin.com/in/mariahharris169/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/mariahsharris" target="_blank">Github</a>
+                <a href="" target="_blank">Instagram</a>
+            </div>
+        </footer>
+
     </div>
 </body>
 </html>

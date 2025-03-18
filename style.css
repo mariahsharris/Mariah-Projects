@@ -1,84 +1,94 @@
 * { /* Universal selector */
-    /* UNiversal CSS Styles go here! */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: white;
 }
 
 /* ---------------------------------------------Container + Header------------------------------------------------------------------ */
 
 
-.header-text-section {
-    background-color: white;
-    border: 1px solid black;
-    box-shadow: -10px 10px black;
-    width: 50%;
+.container {
+    background-color: crimson;
+    border-top: 10px solid white;
+}
 
-    border-radius: 30px;
+.header {
+    margin: 0 auto 20px auto;
+    background-color: black;
+    height: 95vh;
+    border-bottom: 10px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-text-section {
     padding: 30px;
+    width: 50%;
+    border: 1px solid white;
+    box-shadow: -10px 10px white;
+    border-radius: 30px;
     
 }
 
 .header-text-section h1 {
+    color: crimson;
     font-size: 3rem;
-    color: #ff8c00;
-
     margin: 0 0 10px 0;
+    
 }
 
 .header-text-section h2 {
-    font-size: 1.6rem;
-    color: #ff8c00;
-
+    color: crimson;
     margin-bottom: 25px;
 }
 
 .header-text-section p {
+    color: white;
     font-size: 1rem;
-    line-height: 1.6;
-    color: black;
+} 
+
+.header-image-section {
+    width: 500px;
+}
+
+.header-image {
+    width: auto;
+    max-width: 100%;
+    display: block;
+    box-shadow: 10px 10px white;
+    border-radius: 100px;
 }
 
 
-
-/* ----------------------------------------Project Section ----------------------------------------------------------------------- */
-
-
-
-/* --------------------------------------------Form Section------------------------------------------------------------------- */
-
-
-/* -----------------------------------------------Footer Section---------------------------------------------------------------- */
-
-
-
-
-/* --------------------------------------------------------------------------------------------------------------- */
-
-.experiences {
-    background-color: #333; /* Dark gray color */
-    padding: 20px;
-    margin-top: 20px;
-}
-
-
-.experience {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for highlight effect */
-}
-
-
-
-/* --------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------Skills Section ----------------------------------------------------------------------- */
 
 .skills-section {
-    background-color: #333; /* Dark gray color */
+    background-color: crimson; /* Dark gray color */
     padding: 20px;
     margin-top: 20px;
     color: black;
 }
 
+/* Skill-section hover goes here */
+.skills-section:hover{
+    color: black;
+}
 
+.skills-card {
+ /* Skill-card styling goes here!*/
+display: flex;
+background-color: black;
+justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ padding: 15px;
+ margin-bottom: 15px;
+ border-radius: 10px;
+}
+    
 .skills-title {
     font-size: 1.5rem;
     margin-bottom: 5px;
@@ -86,7 +96,99 @@
     text-align: center;
 }
 
+.skills-card:hover {
+    /* Skill-card hover goes here!*/
+    background-color: #333;
+    transform: scale(1.02);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
 
+/* --------------------------------------------Projects------------------------------------------------------------------- */
+
+.projects-section h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Carousel styling */
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    width: 50%;
+    max-width: 600px;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    display: flex;
+    gap: 30px;
+}
+
+.project-card {
+   
+}
+
+.project-title {
+    
+}
+
+.project-text {
+    
+}
+
+.project-link {
+    /* Add content + text decoration */
+}
+
+.project-link:hover {
+    
+}
+
+.project-image {
+
+}
+
+/* back and next id selector */
+
+
+/* ---------------------------------------------------Experiences------------------------------------------------------------ */
+
+.experiences {
+    background-color: crimson; /* Dark gray color */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* experience title */
+    
+.experience {
+    background-color: black;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for highlight effect */
+}
+
+/* experience hover */
+
+/* experience h3 */
+
+/* experience header */
+
+/* experience p */
+
+/* experience hover + hidden text */
+
+/* experience hover + ellipsis */
+
+    
 .hidden-text {
     display: none;
 }
@@ -95,3 +197,50 @@
     display: inline;
     color: black;
 }
+
+/* --------------------------------------------------------Info------------------------------------------------------- */
+
+.info-section-container {
+   
+}
+
+.info-section-container h3 {
+   
+}
+
+.info-section-wrapper {
+    
+}
+
+.info-wrapper {
+    
+}
+
+.question {
+    
+}
+
+.question:hover {
+    
+}
+
+.question h4, .answer p {
+
+}
+
+/* answer class goes here! */
+
+/* open class goes here! */
+
+/* -------------------------------------------------------Footer-------------------------------------------------------- */
+
+/* footer */
+
+/* footer content */
+
+/* footer content a tags */
+
+/* footer content hover */
+
+    
+/* You're Done With CSS! */

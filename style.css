@@ -1,94 +1,130 @@
 * { /* Universal selector */
+    /* We'll change the font here. Since this selector selects everything, we'll also use it to get rid of the default margins for more control over our spacing. */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     color: white;
 }
 
-/* ---------------------------------------------Container + Header------------------------------------------------------------------ */
-
+/* --------- Foundation ------------------------------------------------------------------------------------------------------ */
 
 .container {
-    background-color: crimson;
-    border-top: 10px solid white;
+    /* Changing the background color of the website and giving it a border for aesthetics */
+    background: #333;
+
+    border-top: 10px solid #ff8c00;
 }
 
+/* -------------Header ------------------------------------------------------------------------------------------------------- */
 .header {
-    margin: 0 auto 20px auto;
-    background-color: black;
-    height: 95vh;
-    border-bottom: 10px solid white;
+    margin: 0 auto 20px auto; /* Top right bottom left */
 
+    border-bottom: 10px solid black;
+
+    background-color: white;
+
+    /* This allows us to display our profile image and our introduction text side-by-side */
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: center; /* We'll align them vertically */
+    justify-content: space-around; /* And space them out evenly */
+    height: 95vh;
 }
 
 .header-text-section {
-    padding: 30px;
+    background-color: white;
+
+    /* The text portion will take up half of the space in our header container */
     width: 50%;
-    border: 1px solid white;
-    box-shadow: -10px 10px white;
+
+    border: 1px solid black;
+    /* We'll give it a box shadow to the left and bottom sides for visual interest */
+    box-shadow: -10px 10px black;
+
+    /* We'll also round the corners (border-radius) and add some padding (extra white space inside the border, outside the element) */
     border-radius: 30px;
+    padding: 30px;
     
 }
 
 .header-text-section h1 {
-    color: crimson;
+    /* rem units are a measure of font size - they're relative em units, proportional to the document's root font size. 
+    The number in front of the rem is the multiplier.
+    The default font size of an HTML document is 16px, and we've applied a multiplier of 3, so our font size is 16 * 3 or 48px. 
+
+    These units are great for ensuring that your font sizes are consistent relative to one another, 
+    like ensuring your headers are always larger than your subheaders since their multipliers will be greater.
+    */
     font-size: 3rem;
+    color: #ff8c00;
+
     margin: 0 0 10px 0;
-    
 }
 
 .header-text-section h2 {
-    color: crimson;
+    font-size: 1.6rem;
+    color: #ff8c00;
+
     margin-bottom: 25px;
 }
 
 .header-text-section p {
-    color: white;
+    color: black;
+    
     font-size: 1rem;
-} 
+
+    /* Line height will change the spacing between the lines in this paragraph, similarly to changing the spacing
+    of your Word essays to double-spaced to make it look like you wrote more. */
+    line-height: 1.6;
+}
 
 .header-image-section {
+    /* We'll give our image section a width of 500px so it doesn't get overwhelmingly large. */
     width: 500px;
 }
 
 .header-image {
-    width: auto;
-    max-width: 100%;
     display: block;
-    box-shadow: 10px 10px white;
+
+    /* Our image will have a max width of 100% of our container, so it can grow to 500px wide maximum. */
+    max-width: 100%;
+    /* To keep the height proportional to the width, we'll set it to auto. */
+    height: auto;
+
+    border: none;
+
+    /* We'll also add some rounded corners and box shadow for a nice, clean edge. */
     border-radius: 100px;
+    box-shadow: 5px 5px black;
 }
 
-
-/* ----------------------------------------Skills Section ----------------------------------------------------------------------- */
+/* --------------------------Skills------------------------------------------------------------------------------------------- */
 
 .skills-section {
-    background-color: crimson; /* Dark gray color */
+    background-color: #333; /* Dark gray color */
     padding: 20px;
     margin-top: 20px;
     color: black;
 }
 
-/* Skill-section hover goes here */
-.skills-section:hover{
+.skills-section:hover {
     color: black;
 }
 
 .skills-card {
- /* Skill-card styling goes here!*/
-display: flex;
-background-color: black;
-justify-content: center;
- align-items: center;
- flex-direction: column;
- text-align: center;
- padding: 15px;
- margin-bottom: 15px;
- border-radius: 10px;
+
+    /* The flex box here keeps our items centered. */
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+
+    /* We'll change the organization of our flex items from row to column */
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
-    
+
 .skills-title {
     font-size: 1.5rem;
     margin-bottom: 5px;
@@ -96,151 +132,292 @@ justify-content: center;
     text-align: center;
 }
 
-.skills-card:hover {
-    /* Skill-card hover goes here!*/
-    background-color: #333;
-    transform: scale(1.02);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+/* These are pseudo-classes. They're used to change the style of an HTML element in the state specified. 
+Here, we're changing the style when this element is in a hover state, so it gets applied once we move our mouse over it. 
+There's other pseudo-classes, for example "active" which changes the style while the user clicks on an element.
+*/
+.skills-card:hover { 
+    background-color: #ff8c00; /* Orange color on hover */
+    transform: scale(1.02); /* Reduced scale to prevent overflow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow to prevent overflow */
 }
 
-/* --------------------------------------------Projects------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------------------------- */
 
 .projects-section h2 {
     font-size: 2rem;
+    /* Font weight controls text bolding. */
     font-weight: lighter;
     text-align: center;
     margin-bottom: 25px;
 }
 
-/* Carousel styling */
-
 .carousel {
-    display: flex;
+    width: 100%;
+    display: flex; /* Using a flex box, we'll display button, window, button in order. */
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .projects {
-    width: 50%;
-    max-width: 600px;
+    width: 50%; /* Width is 50% of the flex container - but the 600px width caps it */
+    max-width: 600px; /* Hard cap */
+    
     overflow: scroll;
     scrollbar-width: none;
     scroll-behavior: smooth;
-    display: flex;
-    gap: 30px;
+
+    display: flex; /* Line up all the projects in a row */
+    gap: 30px; /* Separate the flex items, the projects in this case, by 30px each */
 }
 
 .project-card {
-   
+    max-width: 100%; /* take up the full space of the flex item container */
+    padding-bottom: 20px;
+    max-height: fit-content; /* So vertically short images fit correspondingly */
+
+    text-align: center;
+
+    border-radius: 1.5rem;
+    border-top: 6px solid black;
+    border-bottom: 6px solid black;
+
+    background-color: white;
+
+    flex: none; /* Prevents the item from growing or shrinking proportional to the other flex items when there's empty space */
 }
 
 .project-title {
-    
+    font-size: 1.8rem;
+    text-align: center;
+
+    color: #ff8c00;
+    text-shadow: 1px 1px black;
+
+    margin-top: 1rem;
 }
 
 .project-text {
-    
+    color: rgba(0, 0, 0, 0.775);
+    padding: 18px;
 }
 
 .project-link {
-    /* Add content + text decoration */
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 20px;
+    font-weight: bold;
+
+    background-color: #ff8c00;
+    padding: 4px 20px;
+    border-radius: 1rem;
+
+    /* Removing the underlining from the link */
+    text-decoration: none;
+    cursor: pointer;
+
+    /* This defines the way an element will change from its current style to a state style defined by a pseudo-selector.
+    In this case, the project-link has two styles: this current one, and the project-link:hover style defined below.
+    We're changing the text color from its dark gray to white on hover, so the transition attribute will
+    smoothly change (ease) the colors over the course of 0.2 seconds.
+    */
+    transition: color 0.2s ease;
 }
 
 .project-link:hover {
-    
+    color: white;
 }
 
 .project-image {
+    width: 100%; /* Take up as much horizontal space as allowed */
+    
+    /* This centers thin, tall images */
+    display: block; /* Change from inline-block to block so we can set the margins to auto. Margins can't be changed on images by default. */
+    margin: auto; /* Center image */
 
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    object-fit: scale-down; /* Also scales down images that will overflow */
 }
 
-/* back and next id selector */
+#back, #next {
+    color: black;
+    font-size: 2rem;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 5rem; 
+    cursor: pointer; /* When we mouse over this text, it'll set the cursor to a pointer to indicate that it's interactive. */
+}
 
 
-/* ---------------------------------------------------Experiences------------------------------------------------------------ */
+/* -------------------------------Experiences -------------------------------------------------------------------------------- */
 
 .experiences {
-    background-color: crimson; /* Dark gray color */
+    background-color: #333; /* Dark gray color */
     padding: 20px;
     margin-top: 20px;
 }
 
-/* experience title */
-    
+.experiences-title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .experience {
-    background-color: black;
+    background-color: #f9f9f9;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for highlight effect */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition of background color for the orange highlight effect */
 }
 
-/* experience hover */
+.experience:hover {
+    background-color: #ff8c00; /* Orange color on hover */
+    transform: scale(1.02); /* Reduced scale to prevent overflow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow to prevent overflow */
+}
 
-/* experience h3 */
+.experience h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
 
-/* experience header */
+.experience-header h3 {
+    color: black;
+}
 
-/* experience p */
+.experience-header {
+    /* We'll use a flexbox to center the experience header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* experience hover + hidden text */
+.experience p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: black;
+}
 
-/* experience hover + ellipsis */
+.experience:hover .hidden-text {
+    /* When we hover over the experience section, the text should be black. */
+    color: black;
+}
 
-    
+.ellipsis {
+    color: black;
+}
+
+.experience:hover .hidden-text {
+    display: inline;
+}
+
+.experience:hover .ellipsis {
+    display: none;
+}
+
 .hidden-text {
+    /* To hide the text when we're not hovering over the element, we'll set its display to none. */
     display: none;
 }
 
 .ellipsis {
+    /* Since we want the ellipsis (...) to show on the same line as the rest of our text, we'll set its display to inline. */
     display: inline;
-    color: black;
 }
 
-/* --------------------------------------------------------Info------------------------------------------------------- */
-
-.info-section-container {
-   
+/* -------------------------------------------Info Section-------------------------------------------------------------------- */
+.info-section-container { 
+    margin: auto;
+    text-align: center;
+    width: 60%; /* The info section will take up 60% of the container for aesthetics, feel free to play around with the sizing. */
 }
 
-.info-section-container h3 {
-   
+.info-section-container h3 { 
+    font-size: 2rem;
+    font-weight: 200;
 }
 
-.info-section-wrapper {
-    
+.info-section-wrapper { 
+    margin-top: 15px;
+    border-radius: 14px;
+    overflow: hidden; /* When a section isn't expanded, hide its contents. */
 }
 
 .info-wrapper {
-    
+    background-color: white;
 }
 
-.question {
-    
+.question { 
+    font-size: 1rem;
+    font-weight: bold;
+
+    padding: 15px;
+    border-bottom: 1px solid gray;
+
+    cursor: pointer;
+    transition: background-color 0.4s ease-out; /* A transition effect to change the background color of the tabs from gray to orange. */
 }
 
 .question:hover {
-    
+    background-color: #ff8c00;
 }
 
-.question h4, .answer p {
-
+.question h4, .answer p { 
+    color: black;
 }
 
-/* answer class goes here! */
+.answer { 
+    max-height: 0; /* By default, we'll change the maximum height of the answers (the internal contents of the menus) to 0 so they're not shown until the user clicks on them. */
+    overflow: hidden; /* We'll set overflow to hidden to ensure nothing is showing. */
 
-/* open class goes here! */
-
-/* -------------------------------------------------------Footer-------------------------------------------------------- */
-
-/* footer */
-
-/* footer content */
-
-/* footer content a tags */
-
-/* footer content hover */
-
+    padding: 0 1rem;
     
-/* You're Done With CSS! */
+    transition: padding 0.3s ease-out; /* When the user clicks on the question to reveal its answer, padding is added to the answer element,
+    so we'll use this transition on the padding to animate the menu opening smoothly. */
+}
+
+/* This class will be added to the elements with the answer class to reveal its contents. */
+.open {
+    max-height: fit-content; /* We'll change the max height from 0 to fit content. Now, our answer is revealed. */
+    padding: 1rem; /* Padding is added for aesthetics and a smooth opening animation (see the .answer class above) */
+    background-color: rgb(242, 242, 242);
+}
+
+
+/* --------------Footer------------------------------------------------------------------------------------------------- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: #222; /* Darker shade for contrast */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    width: 100%;
+    margin: 20px auto; /* Center the footer */
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Ease into the orange highlight color */
+}
+
+.footer-content a:hover {
+    color: #ff8c00; /* Highlight color on hover */
+}
